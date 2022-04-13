@@ -1,0 +1,76 @@
+
+
+<table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+
+    
+  <!--- Note that these columns can be defined in any order.
+          The actual rendered columns are set as a property on the row definition" -->
+  
+    <!-- Position Column -->
+
+    <!-- <ng-container matColumnDef="StudentID">
+      <th mat-header-cell *matHeaderCellDef> actions </th>
+      <td mat-cell *matCellDef="let element">
+
+        <mat-icon color="primary" type="button" (click)="editStudent(element.StudentID)" style="cursor: pointer;">open_in_new</mat-icon>
+  
+         <mat-icon color="primary" type="button" (click)="deleteStudent(element.StudentID)" color="warn" style="cursor: pointer;">delete_forever
+  
+        </mat-icon>
+  
+      </td>
+  
+    </ng-container> -->
+
+    <ng-container matColumnDef="firstName">
+      <th mat-header-cell *matHeaderCellDef> firstName </th>
+      <td mat-cell *matCellDef="let element"> {{element.firstName}} </td>
+    </ng-container>
+  
+    <!-- Name Column -->
+    <ng-container matColumnDef="lastName">
+      <th mat-header-cell *matHeaderCellDef>lastName</th>
+      <td mat-cell *matCellDef="let element"> {{element.lastName}} </td>
+    </ng-container>
+  
+    <!-- Weight Column -->
+    <ng-container matColumnDef="email">
+      <th mat-header-cell *matHeaderCellDef> email </th>
+      <td mat-cell *matCellDef="let element"> {{element.email}} </td>
+    </ng-container>
+  
+    <!-- Symbol Column -->
+    <ng-container matColumnDef="city">
+      <th mat-header-cell *matHeaderCellDef> city </th>
+      <td mat-cell *matCellDef="let element"> {{element.city}} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="phone">
+      <th mat-header-cell *matHeaderCellDef> phone </th>
+      <td mat-cell *matCellDef="let element"> {{element.phone}} </td>
+    </ng-container>
+    <ng-container matColumnDef="actions">
+      <th mat-header-cell *matHeaderCellDef> actions </th>
+      <td mat-cell *matCellDef="let element">
+        <section class="icons">
+          <div class="example-button-row">
+            <div class="example-flex-container">
+              <div class="example-button-container">
+                <button mat-stroked-button color="dark" aria-label="Example icon button with a delete icon">
+                  <mat-icon type="button"  (click)="deleteStudent(element.StudentID)">delete</mat-icon>
+                </button>
+              </div>
+              <div class="example-button-container">
+                <button mat-stroked-button color="dark" aria-label="Example icon button with a bookmark icon">
+                  <mat-icon type="button" (click)="editStudent(element.StudentID)">bookmark</mat-icon>
+                </button>
+              </div>
+            </div>
+          </div>
+        </section>
+      </td>
+    </ng-container>
+  
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+  </table><nav></nav>

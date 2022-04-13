@@ -1,0 +1,56 @@
+table {
+    width : 100%
+}
+.mat-elevation-z8 {
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    background-color: #DFDFDE;
+}
+.mat-column-firstName {
+    font-size: 18px;
+    
+    
+}
+.mat-column-lastName {
+    font-size: 18px;
+    
+    
+}
+.mat-column-email{
+    font-size: 18px;
+    
+    
+}
+.mat-column-city {
+    font-size: 18px;
+    
+   
+}
+.mat-column-phone  {
+    font-size: 18px;
+    
+    
+}
+.mat-column-actions  {
+    font-size:18px;
+    text-align:center;
+    
+}
+.mat-row:hover {
+    background-color: wheat;
+}
+.example-button-row {
+    display: flex;
+    font-size: small;
+}
+.example-flex-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+  
+  .example-button-container {
+    display: flex;
+    justify-content: center;
+    width: 120px;
+  }
+  

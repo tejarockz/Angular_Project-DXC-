@@ -1,0 +1,31 @@
+
+<!-- <button mat-raised-button color="primary" [routerLink]="'/home'">Primary</button>
+<router-outlet></router-outlet> -->
+<mat-sidenav-container fullscreen class="container">
+    <mat-sidenav mode="side" #sidenav id="sidenav" position="start" opened >
+    <mat-divider style="background-color: lightgray;"></mat-divider>
+    <mat-nav-list>
+    <mat-list-item [routerLink]="'/home'" style="color: black;">
+    <mat-icon mat-list-icon color="dark" matTooltip="Home">home</mat-icon>
+    <h4 mat-line>Home</h4>
+    </mat-list-item>
+    <mat-list-item [routerLink]="'/dashboard'" style="color: black;">
+    <mat-icon mat-list-icon color="dark" matTooltip="Dashboard">dashboard</mat-icon>
+    <h4 mat-line>Dashboard</h4>
+    </mat-list-item>
+    <mat-list-item [routerLink]="'/createstudent'" style="color: black;">
+    <mat-icon mat-list-icon color="dark" matTooltip="Add">add</mat-icon>
+    <h4 mat-line>Add</h4>
+    </mat-list-item>
+    </mat-nav-list>
+    </mat-sidenav>
+    <mat-sidenav-content >
+    <main>
+    <div class="content">
+    <div class="main-content text-justify">
+    <router-outlet></router-outlet>
+    </div>
+    </div>
+    </main>
+    </mat-sidenav-content>
+    </mat-sidenav-container>
