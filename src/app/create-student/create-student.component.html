@@ -15,18 +15,38 @@
             <input matInput name="email" [(ngModel)]="Student.email" required="Student.email">
           </mat-form-field>
           <br>
-          <mat-form-field class="example-full-width" appearance="fill">
+          <!-- <mat-form-field class="example-full-width" appearance="fill">
             <mat-label>City</mat-label>
             <input matInput name="city" [(ngModel)]="Student.city" required="Student.city">
-          </mat-form-field>
-          <!-- <mat-form-field appearance="fill">
-            <mat-form-field class="example-full-width" appearance="fill">
+          </mat-form-field> -->
+          <!-- <mat-form-field appearance="fill"> -->
+
+            
+            <!-- <mat-form-field class="example-full-width" appearance="fill">
             <mat-label>City</mat-label>
             <mat-select>
               <mat-option>None</mat-option>
               <mat-option matInput name="city" *ngFor="let city of cities" [value]="city" [(ngModel)]="Student.city">{{city}}</mat-option>
+              <mat-option matInput name="cities" [(ngModel)]="cities.citiesName" [value]="cities.citiesName"></mat-option>
             </mat-select>
-          </mat-form-field>-->
+          </mat-form-field> -->
+
+          <mat-form-field appearance="legacy" class="main-form-width">
+
+            <mat-label>City</mat-label>
+
+            <mat-select name="citiesDropDown" [(ngModel)]="Student.city" required>
+
+              <mat-option *ngFor="let item of cities" [value]="item.citiesName">
+
+                {{item.citiesName}}
+
+              </mat-option>
+
+            </mat-select>
+
+          </mat-form-field>
+
           <br>
           <mat-form-field class="example-full-width" appearance="fill">
             <mat-label>Phone Number</mat-label>
